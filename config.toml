@@ -1,4 +1,4 @@
-baseURL = "https://breguetman.com"
+baseURL = "https://breguetman.com/"
 languageCode = "en-us"
 title = "BreguetMan"
 theme="archie"
