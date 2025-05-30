@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	{{ partial "header.html" . }}
+	<body>
+		<div class="content">
+			{{ partial "head.html" . }}
+			
+			<main class="list">
+<div class="subtitle-toggle">
+<img src="/images/breguethand.png" alt="Breguet Watch" class="breguethands-img" />
+  <button class="toggle-btn" onclick="toggleSubtitle()">Show Manifesto</button>
+  <div id="subtitle-content" class="subtitle-content hidden">
+<img src="/images/archie.png" alt="Breguet Watch" class="breguet-img" />
+{{ with .Site.GetPage "page" "subtitle.md" }}
+  <p>{{ .Content }}</p>
+{{ end }}
+  </div>
+</div>
+				{{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+				{{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) }}
+				{{ range $paginator.Pages }}
+				<section class="list-item">
+					<h1 class="title"><a href="{{ .RelPermalink }}">{{.Title}}</a></h1>
+					<time>{{ dateFormat ":date_medium" .Date }}{{ if .Draft }} <span class="draft-label">DRAFT</span> {{ end }}</time>
+					<br>{{ template "partials/pagedescription.html" . }}
+					<a class="readmore" href="{{ .RelPermalink }}">Read more ⟶</a>
+				</section>
+				{{ end }}
+				{{ template "partials/paginator.html" . }}
+			</main>
+			{{ partial "footer.html" . }}
+		</div>
+		
+	</body>
+</html>
+<script>
+  function toggleSubtitle() {
+    const content = document.getElementById('subtitle-content');
+    const button = document.querySelector('.toggle-btn');
+    if (content.classList.contains('hidden')) {
+      content.classList.remove('hidden');
+      button.textContent = 'Hide Manifesto';
+    } else {
+      content.classList.add('hidden');
+      button.textContent = 'Show Manifesto';
+    }
+  }
+</script>

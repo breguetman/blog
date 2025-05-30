@@ -1,0 +1,41 @@
+# Hugo generated files
+/public/
+/resources/_gen/
+/assets/jsconfig.json
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.tmp
+
+# Node dependencies (if using npm or yarn)
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment files
+.env
+
+# IDEs
+.idea/
+.vscode/
+*.code-workspace
+
+# Hugo cache (newer versions may use this)
+hugo_stats.json
+.cache/
+
+# Deployment
+/netlify/
+.firebase/
+.vercel/
+
+# Static CMS
+admin/config.yml.lock
+
+.projectile
