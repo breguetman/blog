@@ -1,4 +1,4 @@
-baseURL = "https://username.github.io/blog/"
+baseURL = "https://breguetman.com"
 languageCode = "en-us"
 title = "BreguetMan"
 theme="archie"
