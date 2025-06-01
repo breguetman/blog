@@ -3,7 +3,7 @@ title: "Subtitle"
 ---
 # The BreguetMan Manifesto
 ## Declaration
-I am a very proud **BreguetMan**. I own **three rose gold Breguet watches**: the **7057**, **7147**, and **3818**.
+I am a very proud **BreguetMan**. I own **three rose gold Breguet watches**: the **7057**, **7147**, and **3810**.
 ## On Standards
 Whilst my approach may be brash by society standards, you need to appreciate that I am a **BreguetMan**.
 ## The **BreguetMan** Ethos
